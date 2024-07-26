@@ -1,0 +1,15 @@
+
+.container {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
+}
+
+
+#grid-box {
+    height: 25px;
+    width: 25px;
+    background-color: blueviolet;
+}
