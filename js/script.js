@@ -12,6 +12,7 @@ function makeGrid(num1, num2) {
         // create box element
 
         let box = document.createElement("div");
+        box.classList.add("box");
         box.setAttribute("id", "grid-box");
         
         console.log(i)
@@ -25,4 +26,19 @@ function makeGrid(num1, num2) {
 // create grid
 
 makeGrid(16, 16)
+
+// add event listener for hover effect
+
+let boxHover = document.querySelectorAll("#grid-box");
+
+boxHover.forEach((gridBox) => {
+    gridBox.addEventListener("pointerover", (event) => {
+        gridBox.setAttribute("style", "background: black;");
+    })
+
+    gridBox.addEventListener("pointerout", (event) => {
+        gridBox.setAttribute("style", "default");
+    })
+})
+
 
