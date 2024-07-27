@@ -19,6 +19,7 @@ function makeGrid(num1, num2) {
         let box = document.createElement("div");
         box.classList.add("box");
         box.setAttribute("id", "grid-box");
+        box.setAttribute("style", `width: ${480 / num1}px; height: ${480 / num1}px;`);
         
         console.log(i)
 
@@ -36,34 +37,34 @@ makeGrid(16, 16)
 
 let spsGrid = document.querySelector(".sps-grid")
 spsGrid.addEventListener('pointerdown', (event) => {
-    let gridVar = prompt("Please enter the number of squares per side for the new grid.");
+    let gridVar = prompt("Please enter the number of squares per side for the new grid. (Range 2-100)");
     makeGrid(gridVar, gridVar);
 
     // refire event listerners for user-defined grid
 
-    let boxHover = document.querySelectorAll("#grid-box");
+    let boxHover = document.querySelectorAll(".box");
 
-    boxHover.forEach((gridBox) => {
-    gridBox.addEventListener("pointerover", (event) => {
-        gridBox.setAttribute("style", "background: black;");
+    boxHover.forEach((box) => {
+    box.addEventListener("pointerover", (event) => {
+        box.style.setProperty('background-color', "black");
     })
 
-    gridBox.addEventListener("pointerout", (event) => {
-        gridBox.setAttribute("style", "default");
+    // box.addEventListener("pointerout", (event) => {
+    //     box.style.setProperty("background-color", "beige");
+    // })
     })
-})
 } )
 
 // add event listener for hover effect
 
-let boxHover = document.querySelectorAll("#grid-box");
+let boxHover = document.querySelectorAll(".box");
 
-boxHover.forEach((gridBox) => {
-    gridBox.addEventListener("pointerover", (event) => {
-        gridBox.setAttribute("style", "background: black;");
+boxHover.forEach((box) => {
+    box.addEventListener("pointerover", (event) => {
+        box.style.setProperty('background-color', "black");
     })
 
-    gridBox.addEventListener("pointerout", (event) => {
-        gridBox.setAttribute("style", "default");
-    })
+    // box.addEventListener("pointerout", (event) => {
+    //     box.style.setProperty("background-color", "beige");
+    // })
 })
