@@ -5,8 +5,29 @@
     flex-wrap: wrap;
     margin: auto;
     justify-content: center;
+    border-color: purple;
+    border-style: solid;
 }
 
+
+.sps-grid {
+    margin: 10px auto;
+    display: block;
+    padding: 10px;
+    width: 200px;
+    font-family: Helvetica;
+    font-weight: 900;
+    background-color: purple;
+    color: white;
+    border: solid purple 2px;
+    border-radius: 5px;
+}
+
+.sps-grid:hover {
+    color: purple;
+    background-color: white;
+    border: solid purple 2px;
+}
 
 #grid-box {
     height: 25px;
